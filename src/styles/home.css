@@ -1,0 +1,182 @@
+.home {
+	display: grid;
+	place-content: center;
+	height: 100dvh;
+	background-image: url('../../public/home.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 2em;
+}
+.home__container {
+	max-width: 600px;
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	border-radius: 15px;
+	backdrop-filter: brightness(1) blur(5px);
+
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.home__title {
+	font-size: 2em;
+	color: #080b5f;
+	text-shadow: 3px 3px 5px;
+}
+.home__title {
+	-webkit-animation: bounce-top 3s infinite both;
+	animation: bounce-top 3s infinite both;
+}
+
+@-webkit-keyframes bounce-top {
+	0% {
+		-webkit-transform: translateY(-45px);
+		transform: translateY(-45px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	24% {
+		opacity: 1;
+	}
+	40% {
+		-webkit-transform: translateY(-24px);
+		transform: translateY(-24px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	65% {
+		-webkit-transform: translateY(-12px);
+		transform: translateY(-12px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	82% {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	93% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+		opacity: 1;
+	}
+}
+@keyframes bounce-top {
+	0% {
+		-webkit-transform: translateY(-45px);
+		transform: translateY(-45px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	24% {
+		opacity: 1;
+	}
+	40% {
+		-webkit-transform: translateY(-24px);
+		transform: translateY(-24px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	65% {
+		-webkit-transform: translateY(-12px);
+		transform: translateY(-12px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	82% {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	93% {
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+		opacity: 1;
+	}
+}
+
+.home__text {
+	font-weight: 500;
+	color: #2b45d8;
+	font-size: 1.5em;
+	border-bottom: 2em;
+}
+.home__input {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 0.5em 1em;
+	border-radius: 4px 0 0 4px;
+}
+.home__btn {
+	background-color: rgb(16, 45, 207);
+	border: transparent;
+	padding: 0.5em 1em;
+	border-radius: 0 4px 4px 0;
+	color: rgb(6, 122, 255);
+	cursor: pointer;
+
+	&:hover {
+		transition: 0.5s;
+		transform: scale(1.05);
+		background-color: rgb(3, 8, 34);
+	}
+}
+.home__search {
+	display: block;
+	margin: 0 auto;
+}
+.home__link {
+	text-decoration: none;
+	color: #010522;
+	transition: 0.5s;
+	cursor: pointer;
+	font-weight: 700;
+	&:hover {
+		color: rgb(69, 10, 209);
+	}
+}
+.btn--radius {
+	border-radius: 4px;
+	display: block;
+	margin: 0 auto;
+}
