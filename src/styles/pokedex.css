@@ -1,5 +1,5 @@
 .pokedex {
-	padding: 2em 0;
+	padding: 0;
 }
 .pokedex__container {
 	max-width: 1024px;
@@ -32,17 +32,17 @@
 	outline: none;
 }
 .search__btn {
-	background-color: rgb(16, 45, 207);
+	background-color: orangered;
+	color: rgb(29, 27, 27);
+	font-weight: 800;
 	border: transparent;
 	padding: 0.5em 1em;
 	border-radius: 0 4px 4px 0;
-	color: rgb(6, 122, 255);
 	cursor: pointer;
-
 	&:hover {
 		transition: 0.5s;
 		transform: scale(1.05);
-		background-color: rgb(3, 8, 34);
+		background-color: rgb(255, 0, 0);
 	}
 }
 

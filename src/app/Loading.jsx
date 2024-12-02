@@ -1,9 +1,9 @@
 import React from 'react';
-
+import '../styles/Loading.css';
 function Loading() {
 	return (
-		<div>
-			<h1>Loading...</h1>
+		<div className="loader">
+			<div className="loader__container"></div>
 		</div>
 	);
 }

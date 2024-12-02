@@ -1,74 +1,163 @@
-* {
-	text-align: center;
-	text-transform: capitalize;
-	color: #080b5f;
+.header {
+	background-image: url('/public/header.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 5px 5px 5px rgb(80, 7, 7);
+	height: 10vh;
+	padding: 1em;
 }
-.details {
-	width: 100%;
-	margin: 1em;
+.header--name {
+	position: relative;
+	font-weight: 800;
+	color: #cccccc80;
+	font-size: x-large;
 }
 .btn {
-	padding: 0.25em;
-	border-radius: 5px;
-	background-color: #5c6bec49;
-	color: #29ac1d;
-	left: 0;
-}
-.details__header {
 	position: relative;
+	top: 1em;
+	left: 60%;
+	padding: 0.2em 0.5em;
+	border-radius: 10px;
+	background-color: orangered;
+	color: rgb(29, 27, 27);
+	font-weight: 800;
+	&:hover {
+		box-shadow: 0 0 5px 3px rgb(68, 2, 11);
+		transition: 1s;
+	}
+}
+.details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+	text-transform: capitalize;
+	margin: 2em;
+}
+.details__card {
+	display: grid;
+	grid-template-columns: 1fr;
+	max-width: 1024px;
 	width: 100%;
-	aspect-ratio: 1.8;
-	margin-bottom: 2em;
-}
-.details__header img {
-	position: absolute;
-	top: 1.5em;
-	left: 0;
-	right: 0;
 	margin: 0 auto;
-	width: 75%;
-	height: 100%;
-}
-.details__info {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.details__info-id {
-	border: 1px solid #cccccc40;
-	padding: 0.25em;
-	border-radius: 4px;
-	color: #8a8a8a;
+	padding: 0.5em;
+	box-shadow: 0 0 5px 5px rgb(153, 130, 175);
+	border-radius: 1em;
 }
 
-.details__size {
-	color: #080b5f;
+.details__card--contentImage {
+	width: 100%;
+	height: 90%;
+	background: linear-gradient(
+		45deg,
+		rgba(199, 8, 34, 0.7),
+		rgba(107, 97, 96, 0.5)
+	);
+	border-radius: 1em 1em 0 0;
+}
+.details__card--contentImage img {
+	position: relative;
+	margin: 0 auto;
+	width: 30%;
+	bottom: 2.3em;
+	left: 35%;
+}
+.details__card-character {
+	display: grid;
+}
+.details__card-character--id {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #cccccc;
+	justify-self: center;
+}
+.details__card-character--name {
+	display: flex;
+	justify-content: center;
+}
+
+.details__card-character--sizes {
+	color: #585858;
 	font-weight: 500;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
-}
-.details__size--type {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.details__body {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
-.details__container {
-	display: flex;
-	column-gap: 3em;
 	justify-content: center;
 }
+.details__card-character--sizesItems {
+	display: grid;
+	justify-items: center;
+	padding: 0.2em;
+	font-size: 0.8em;
+}
 
-.details__body--items {
-	border: 1px solid #080b5f;
-	padding: 0.25em 1em;
-	border-radius: 4px;
-	background-color: #5559db;
+.details__card--skills {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.details__card--skillsName {
+	justify-self: center;
+}
+.details__card--skillsItems {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5em;
+}
+.details__card--skillsItems span {
+	background-color: #ccc;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	transition: 1s;
+	&:hover {
+		background-color: #cccccc80;
+		transform: scale(1.1);
+	}
+}
+.details__card--stats {
+	display: grid;
+}
+
+.details__card--statsItem {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	color: #5a5959;
+}
+progress {
+	width: 100%;
+	height: 2em;
+	appearance: none;
+}
+progress::-webkit-progress-bar {
+	background-color: #ccc;
+	border-radius: 1em;
+}
+progress::-webkit-progress-value {
+	background-color: #e40c0c;
+	border-radius: 1em;
+}
+
+.details__card-movementsName {
+	font-weight: 800;
+	justify-self: center;
+	margin-bottom: 0.5em;
+}
+
+.details__card-movementsContent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5em;
+}
+.details__card-movementsValue {
+	background-color: #ccc;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	transition: 1s;
+	&:hover {
+		background-color: #cccccc80;
+		transform: scale(1.1);
+	}
 }

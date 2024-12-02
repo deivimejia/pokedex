@@ -9,9 +9,10 @@ import PokemonCard from '../components/pokedex/PokemonCard';
 import Pages from '../components/pokedex/Pages';
 import { Link } from 'react-router-dom';
 import '../styles/pokedex.css';
+import Loading from './Loading';
 function Pokedex() {
 	const [name] = useNameContext();
-	const [pokemons, setPokemons] = useFetch();
+	const [pokemons, setPokemons, loading] = useFetch();
 	const [pokemonUrl, setPokemonUrl] = useState(null);
 	const [isFiltering, setIsFiltering] = useState(null);
 
@@ -43,30 +44,45 @@ function Pokedex() {
 	};
 	const pokemonsArray = isFiltering ? pokemons?.pokemon : pokemons?.results;
 	return (
-		<div className="pokedex">
-			<Link to="/">{'⬅️'} Volver</Link>
-			<div className="pokedex__container">
-				<HeaderPokedex name={name} />
-				<div className="pokedex__form">
-					<Search handleSearch={handleSearch} />
-					<Filters handleTypeFilter={handleTypeFilter} />
+		<>
+			{loading ? (
+				<Loading />
+			) : (
+				<div className="pokedex">
+					<div className="header">
+						<h2 className="header--name">POKEDEX</h2>
+						{/*Link*/}
+					</div>
+					<Link className="btn" to="/">
+						Volver
+					</Link>
+					<div className="pokedex__container">
+						<HeaderPokedex name={name} />
+						<div className="pokedex__form">
+							<Search handleSearch={handleSearch} />
+							<Filters handleTypeFilter={handleTypeFilter} />
+						</div>
+						{!isFiltering && (
+							<Pages pokemons={pokemons} setPokemons={setPokemons} />
+						)}
+						<div className="pokemons__cards">
+							{pokemonUrl ? (
+								<>
+									<PokemonCard url={pokemonUrl} />
+								</>
+							) : (
+								<>
+									<PokemonList
+										pokemons={pokemonsArray}
+										isFiltering={isFiltering}
+									/>
+								</>
+							)}
+						</div>
+					</div>
 				</div>
-				{!isFiltering && (
-					<Pages pokemons={pokemons} setPokemons={setPokemons} />
-				)}
-				<div className="pokemons__cards">
-					{pokemonUrl ? (
-						<>
-							<PokemonCard url={pokemonUrl} />
-						</>
-					) : (
-						<>
-							<PokemonList pokemons={pokemonsArray} isFiltering={isFiltering} />
-						</>
-					)}
-				</div>
-			</div>
-		</div>
+			)}
+		</>
 	);
 }
 

@@ -22,7 +22,7 @@
 }
 .home__title {
 	font-size: 2em;
-	color: #080b5f;
+	color: #ff0000;
 	text-shadow: 3px 3px 5px;
 }
 .home__title {
@@ -137,7 +137,7 @@
 
 .home__text {
 	font-weight: 500;
-	color: #2b45d8;
+	color: #af0d0d;
 	font-size: 1.5em;
 	border-bottom: 2em;
 }
@@ -148,17 +148,19 @@
 	border-radius: 4px 0 0 4px;
 }
 .home__btn {
-	background-color: rgb(16, 45, 207);
+	background-color: orangered;
+	color: rgb(29, 27, 27);
+	font-weight: 800;
 	border: transparent;
 	padding: 0.5em 1em;
 	border-radius: 0 4px 4px 0;
-	color: rgb(6, 122, 255);
+
 	cursor: pointer;
 
 	&:hover {
 		transition: 0.5s;
 		transform: scale(1.05);
-		background-color: rgb(3, 8, 34);
+		background-color: rgb(138, 77, 41);
 	}
 }
 .home__search {
@@ -172,7 +174,7 @@
 	cursor: pointer;
 	font-weight: 700;
 	&:hover {
-		color: rgb(69, 10, 209);
+		color: rgb(231, 16, 16);
 	}
 }
 .btn--radius {
